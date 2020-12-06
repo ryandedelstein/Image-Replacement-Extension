@@ -1,0 +1,19 @@
+{
+    "name": "Image Replacement Extension",
+    "version": "1.0",
+    "description": "This Google Chrome extension replaces all images with a chosen jpeg.",
+    "browser_action" : {
+        "default_popup" : "popup.html"
+    },
+    "web_accessible_resources" : ["images/*.jpg"],
+    "content_scripts" : [
+        {
+        "matches" : ["<all_urls>"],
+        "js" : ["content.js"],
+        "all_frames" : true,
+        "run_at" : "document_end"
+        }
+    ],
+    "permissions": [ "storage" ],
+    "manifest_version": 2
+}
