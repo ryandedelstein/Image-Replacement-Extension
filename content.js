@@ -9,7 +9,7 @@ chrome.storage.sync.get({
             for (img of imgs) {
                 img.src = url;
             }
-        }, 3000);
+        }, 1);
     } else {
         window.clearInterval();
     }

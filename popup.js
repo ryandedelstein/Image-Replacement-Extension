@@ -16,7 +16,7 @@ if (document.getElementById("replace")) {
         chrome.storage.sync.set({
             value : document.getElementById("replace").value
         }, function(fields) {
-            
+            window.location.reload();
         });
     });
 }
